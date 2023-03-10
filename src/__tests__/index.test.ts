@@ -10,4 +10,9 @@ describe('Test strLen', () => {
   it('Correctly evaluates the length of Hello World!!! to be too long, bruv', () => {
     expect(strLen('hello world!!!')).toEqual('too long bruv');
   });
+
+  it('Correctly evaluates the length of Hello World! to use custom msg', () => {
+    const msg = 'uh oh';
+    expect(strLen('hello world!!!', msg)).toEqual(msg);
+  });
 });

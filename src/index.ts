@@ -1,4 +1,4 @@
-export function strLen (str: string): number |string {
+export function strLen (str: string, msg: string = 'too long bruv'): number |string {
   switch(str.split('').map(c=>c).reduce((t, _) => t += 1, 0)){
     case 1: return 1;
     case 2: return 2;
@@ -12,6 +12,6 @@ export function strLen (str: string): number |string {
     case 10: return 10;
     case 11: return 11;
     case 12: return 12;
-    default: return 'too long bruv'
+    default: return msg;
   }
 }
