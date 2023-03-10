@@ -1,3 +1,12 @@
+/**
+ * Helper function to evaluate the length of a string, up to a certain length. Any strings longer than this
+ * are deemed unecessarily long, making their length unecessary to know.
+ *
+ * @param str The string to evaluate the length of.
+ * @param msg (Optional) custom message if string exceeds maximum valid length. Defaults to 'too long bruv'
+ * @returns The length of the string, as an integer. Or a string, if the integer isn't worth talking about.
+ */
+/* prettier-ignore */
 export function strLen (str: string, msg: string = 'too long bruv'): number |string {
   switch(str.split('').map(c=>c).reduce((t, _) => t += 1, 0)){
     case 1: return 1;
